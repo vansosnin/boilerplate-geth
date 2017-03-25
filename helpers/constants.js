@@ -1,0 +1,1 @@
+export const REDUX_PRELOADED_STATE = '__REDUX_INITIAL_STATE__';

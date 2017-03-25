@@ -1,8 +1,14 @@
+import serialize from 'serialize-javascript';
+import createDOMPurify from 'dompurify';
+import jsdom from 'jsdom';
+
 import { getCurrentLangCode } from './i18n';
+import { REDUX_PRELOADED_STATE } from './constants';
 
 class htmlRenderer {
-    constructor({ application }) {
+    constructor({ application, initialState }) {
         this._application = application;
+        this._initialState = initialState;
     }
 
     getHtml() {
@@ -44,10 +50,27 @@ class htmlRenderer {
 
     getScripts() {
         return `
+            <script id='${REDUX_PRELOADED_STATE}'>
+                window.${REDUX_PRELOADED_STATE} = ${this.getEscapedInitialState()}
+            </script>
             <script src='http://localhost:3001/manifest.js'></script>
             <script src='http://localhost:3001/vendor.js'></script>
             <script src='http://localhost:3001/client.js'></script>
         `;
+    }
+
+    getEscapedInitialState() {
+        const serializedState = serialize(this._initialState);
+        const window = jsdom.jsdom('', {
+            features: {
+                FetchExternalResources: false, // disables resource loading over HTTP / filesystem
+                ProcessExternalResources: false // do not execute JS within script blocks
+            }
+        }).defaultView;
+        const DOMPurify = createDOMPurify(window);
+        const purifiedState = DOMPurify.sanitize(serializedState);
+
+        return purifiedState;
     }
 };
 
