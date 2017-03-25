@@ -18,9 +18,7 @@ class htmlRenderer {
                 ${this.getStyles()}
             </head>
             <body>
-                <div id='root'>
-                    ${this._application}
-                </div>
+                <div id='root'>${this._application}</div>
                 ${this.getScripts()}
             </body>
         </html>
