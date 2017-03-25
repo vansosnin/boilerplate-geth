@@ -3,6 +3,8 @@ const path = require('path');
 const webpackMerge = require('webpack-merge');
 const nodeExternals = require('webpack-node-externals');
 const StartServerPlugin = require('start-server-webpack-plugin');
+
+const buildTarget = require('./buildTarget');
 const stylesProductionConfigurator = require('./styles-prod-config');
 
 module.exports = (directoryname, isPorduction) => {
@@ -16,6 +18,7 @@ module.exports = (directoryname, isPorduction) => {
     const developmentConfig = {
         entry: {
             server: [
+                'babel-polyfill',
                 'webpack/hot/poll?1000',
                 path.join(directoryname, 'server', 'index.js')
             ]
@@ -31,7 +34,7 @@ module.exports = (directoryname, isPorduction) => {
             new webpack.NoEmitOnErrorsPlugin(),
             new webpack.DefinePlugin({
                 'process.env': {
-                    BUILD_TARGET: JSON.stringify('server')
+                    BUILD_TARGET: JSON.stringify(buildTarget.server)
                 }
             })
         ]

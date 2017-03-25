@@ -4,7 +4,7 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = directoryname => ({
     entry: {
-        vendor: ['react', 'react-dom', 'redux', 'react-redux', 'bluebird']
+        vendor: ['react', 'react-dom', 'redux', 'react-redux', 'redux-actions', 'react-router', 'react-router-redux', 'reselect', 'bluebird']
     },
     module: {
         rules: [
@@ -14,7 +14,7 @@ module.exports = directoryname => ({
                 include: [
                     path.join(directoryname, 'client'),
                     path.join(directoryname, 'server'),
-                    path.join(directoryname, 'components')
+                    path.join(directoryname, 'ui')
                 ],
                 exclude: /node_modules/
             }

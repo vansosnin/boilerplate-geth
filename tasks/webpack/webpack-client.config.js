@@ -3,6 +3,8 @@ const path = require('path');
 const webpackMerge = require('webpack-merge');
 const nodeExternals = require('webpack-node-externals');
 const StartServerPlugin = require('start-server-webpack-plugin');
+
+const buildTarget = require('./buildTarget');
 const stylesProductionConfigurator = require('./styles-prod-config');
 
 module.exports = (directoryname, isPorduction) => {
@@ -45,6 +47,7 @@ module.exports = (directoryname, isPorduction) => {
                 'react-hot-loader/patch',
                 'webpack-dev-server/client?http://localhost:3001',
                 'webpack/hot/only-dev-server',
+                'babel-polyfill',
                 path.join(directoryname, 'client', 'index.js')
             ]
         },
@@ -58,7 +61,7 @@ module.exports = (directoryname, isPorduction) => {
             new webpack.NoEmitOnErrorsPlugin(),
             new webpack.DefinePlugin({
                 'process.env': {
-                    BUILD_TARGET: JSON.stringify('client')
+                    BUILD_TARGET: JSON.stringify(buildTarget.client)
                 }
             })
         ],
