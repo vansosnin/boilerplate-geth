@@ -5,11 +5,19 @@
             {
                 "modules": false,
                 "targets": {
-                    "browsers": ["last 3 versions"],
+                    "browsers": [
+                        "last 3 versions",
+                        "ie >= 11"
+                    ],
                     "node": "current"
                 }
             }
         ],
         "react"
+    ],
+    "plugins": [
+        "transform-object-rest-spread",
+        "transform-class-properties",
+        "transform-export-extensions"
     ]
 }
