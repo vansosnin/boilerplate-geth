@@ -8,6 +8,8 @@ import createStore from '../../ui/init/createStore';
 import routes from '../../ui/init/routes';
 
 const handleRouter = (res, props) => {
+    // todo: build here initial state
+
     const store = createStore(props);
     const initialState = store.getState();
     const application = renderToString(
