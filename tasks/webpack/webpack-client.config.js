@@ -6,6 +6,7 @@ const StartServerPlugin = require('start-server-webpack-plugin');
 
 const buildTarget = require('./buildTarget');
 const stylesProductionConfigurator = require('./styles-prod-config');
+const baseDevConfig = require('./dev-config');
 
 module.exports = (directoryname, isPorduction) => {
     const baseConfig = {
@@ -85,5 +86,5 @@ module.exports = (directoryname, isPorduction) => {
         return webpackMerge(baseConfig, stylesProductionConfig, productionConfig);
     }
 
-    return webpackMerge(baseConfig, developmentConfig);
+    return webpackMerge(baseConfig, baseDevConfig, developmentConfig);
 };
