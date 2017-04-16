@@ -72,6 +72,6 @@ class htmlRenderer {
 
         return purifiedState;
     }
-};
+}
 
 export default htmlRenderer;
