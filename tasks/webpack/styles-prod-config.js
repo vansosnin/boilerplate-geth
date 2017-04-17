@@ -7,7 +7,7 @@ module.exports = isPorduction => ({
                 // todo: postcss
                 loader: extractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: 'css-loader?localIdentName=[name]-[local]-[hash:base64:8]&minimize'
+                    use: 'css-loader?localIdentName=[name]-[local]-[hash:base64:8]!csso-loader'
                 })
             },
             {

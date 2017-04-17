@@ -9,6 +9,7 @@
     "start:server": "webpack --config webpack.config.server.js",
     "start:client": "webpack-dev-server --config webpack.config.client.js",
     "start": "rm -rf ./dist && yarn start:server & yarn start:client",
+
     "comb": "gulp sass:comb",
     "eslint": "eslint ./**/**.js* --cache"
   },
