@@ -10,7 +10,8 @@ See dependencies and scripts to run [here](https://github.com/vansosnin/boilerpl
 
 - [ ] Build package.json on cli command like `./start` (get inspiration from [postcss-plugin-boilerplate](https://github.com/postcss/postcss-plugin-boilerplate))
 - [ ] Add commands for tests & etc.
-- [ ] Add linters
+- [x] Add linters
 - [ ] Add production config
+- [ ] Add git hooks
 
 ![geth](https://raw.githubusercontent.com/vansosnin/boilerplate-geth/master/content/geth_cut.jpg)

@@ -11,7 +11,12 @@
     "start": "rm -rf ./dist && yarn start:server & yarn start:client",
 
     "comb": "gulp sass:comb",
-    "eslint": "eslint ./**/**.js* --cache"
+    "stylefmt": "stylefmt --recursive ./ui",
+
+    "stylelint": "stylelint ./**/*.scss --color --syntax scss",
+    "eslint": "eslint ./**/**.js* --cache",
+
+    "preversion": "yarn eslint && yarn stylelint"
   },
   "dependencies": {
     "autoprefixer": "6.7.7",
@@ -83,6 +88,9 @@
     "perfectionist": "2.4.0",
     "postcss-sorting": "2.0.1",
     "react-hot-loader": "3.0.0-beta.6",
+    "stylelint": "7.10.1",
+    "stylelint-config-geth": "0.0.1",
+    "stylelint-scss": "1.4.4",
     "webpack-bundle-analyzer": "2.4.0",
     "webpack-dev-server": "2.4.2"
   }
