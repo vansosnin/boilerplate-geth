@@ -9,21 +9,18 @@
     "start:server": "webpack --config webpack.config.server.js",
     "start:client": "webpack-dev-server --config webpack.config.client.js",
     "start": "rm -rf ./dist && yarn start:server & yarn start:client",
-
     "comb": "gulp sass:comb",
     "stylefmt": "stylefmt --recursive ./ui",
-
     "stylelint": "stylelint ./**/*.scss --color --syntax scss",
     "eslint": "eslint ./**/**.js* --cache",
-
     "preversion": "yarn eslint && yarn stylelint"
   },
   "dependencies": {
     "autoprefixer": "6.7.7",
     "axios": "0.16.1",
     "babel-core": "6.24.1",
-    "babel-eslint": "7.2.2",
-    "babel-loader": "6.4.1",
+    "babel-eslint": "7.2.3",
+    "babel-loader": "7.0.0",
     "babel-plugin-transform-class-properties": "6.24.1",
     "babel-plugin-transform-export-extensions": "6.22.0",
     "babel-plugin-transform-object-rest-spread": "6.23.0",
@@ -35,7 +32,7 @@
     "bunyan": "1.8.10",
     "css-loader": "0.28.0",
     "csso-loader": "0.3.0",
-    "dompurify": "0.8.5",
+    "dompurify": "0.8.6",
     "eslint-loader": "1.7.1",
     "express": "4.15.2",
     "extract-text-webpack-plugin": "2.1.0",
@@ -53,8 +50,8 @@
     "react-router": "2.8.1",
     "react-router-redux": "4.0.8",
     "redux": "3.6.0",
-    "redux-actions": "2.0.1",
-    "redux-saga": "0.14.6",
+    "redux-actions": "2.0.2",
+    "redux-saga": "0.14.7",
     "redux-thunk": "2.2.0",
     "reselect": "3.0.0",
     "sass-loader": "6.0.3",
