@@ -22,8 +22,8 @@
     "eslint": "eslint ./**/**.js* --cache",
 
     "precommit": "lint-staged",
-    "prepush": "yarn eslint && yarn stylelint",
-    "preversion": "yarn eslint && yarn stylelint"
+    "prepush": "yarn eslint && yarn stylelint && yarn test",
+    "preversion": "yarn eslint && yarn stylelint && yarn test"
   },
   "dependencies": {
     "autoprefixer": "6.7.7",
