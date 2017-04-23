@@ -17,6 +17,7 @@
     "stylelint-staged": "stylelint --color --syntax scss",
     "eslint-staged": "eslint --cache",
 
+    "test": "mocha ./**/__tests__/**/*.test.js --opts ./mocha.opts",
     "stylelint": "stylelint ./**/*.scss --color --syntax scss",
     "eslint": "eslint ./**/**.js* --cache",
 

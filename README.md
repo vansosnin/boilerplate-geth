@@ -9,7 +9,7 @@ See dependencies and scripts to run [here](https://github.com/vansosnin/boilerpl
 ## TODO
 
 - [ ] Build package.json on cli command like `./start` (get inspiration from [postcss-plugin-boilerplate](https://github.com/postcss/postcss-plugin-boilerplate))
-- [ ] Add commands for tests & etc.
+- [x] Add commands for tests & etc.
 - [x] Add linters
 - [ ] Add production config
 - [x] Add git hooks
