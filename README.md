@@ -1,5 +1,7 @@
 # Boilerplate «Geth»
 
+[![Build Status](https://travis-ci.org/vansosnin/boilerplate-geth.svg?branch=master)](https://travis-ci.org/vansosnin/boilerplate-geth)
+
 This is my personal boilerplate for nodejs web-apps.
 
 ## 42
