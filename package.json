@@ -9,10 +9,19 @@
     "start:server": "webpack --config webpack.config.server.js",
     "start:client": "webpack-dev-server --config webpack.config.client.js",
     "start": "rm -rf ./dist && yarn start:server & yarn start:client",
+
     "comb": "gulp sass:comb",
     "stylefmt": "stylefmt --recursive ./ui",
+
+    "lint-staged": "lint-staged",
+    "stylelint-staged": "stylelint --color --syntax scss",
+    "eslint-staged": "eslint --cache",
+
     "stylelint": "stylelint ./**/*.scss --color --syntax scss",
     "eslint": "eslint ./**/**.js* --cache",
+
+    "precommit": "lint-staged",
+    "prepush": "yarn eslint && yarn stylelint",
     "preversion": "yarn eslint && yarn stylelint"
   },
   "dependencies": {
@@ -80,6 +89,8 @@
     "gulp-eol": "0.1.2",
     "gulp-load-plugins": "1.5.0",
     "gulp-postcss": "6.4.0",
+    "husky": "0.13.3",
+    "lint-staged": "3.4.0",
     "mocha": "3.2.0",
     "nodemon": "1.11.0",
     "perfectionist": "2.4.0",

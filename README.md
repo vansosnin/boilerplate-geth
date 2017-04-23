@@ -12,6 +12,6 @@ See dependencies and scripts to run [here](https://github.com/vansosnin/boilerpl
 - [ ] Add commands for tests & etc.
 - [x] Add linters
 - [ ] Add production config
-- [ ] Add git hooks
+- [x] Add git hooks
 
 ![geth](https://raw.githubusercontent.com/vansosnin/boilerplate-geth/master/content/geth_cut.jpg)
