@@ -102,6 +102,6 @@
     "stylelint-config-geth": "0.0.1",
     "stylelint-scss": "1.4.4",
     "webpack-bundle-analyzer": "2.4.0",
-    "webpack-dev-server": "2.4.2"
+    "webpack-dev-server": "2.4.4"
   }
 }
