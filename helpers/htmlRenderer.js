@@ -32,13 +32,13 @@ class htmlRenderer {
     }
 
     getTitle() {
-        return `<title>Personal Funds</title>`;
+        return `<title>Pet Project</title>`;
     }
 
     getMetaTags() {
         return `
-            <meta name='description' content='Personal finances management application'>
-            <meta name='keywords' content='funds, finances, mobile, application'>
+            <meta name='description' content=''>
+            <meta name='keywords' content=''>
         `;
     }
 
