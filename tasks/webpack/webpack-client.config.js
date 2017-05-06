@@ -1,12 +1,9 @@
 const webpack = require('webpack');
 const path = require('path');
 const webpackMerge = require('webpack-merge');
-const nodeExternals = require('webpack-node-externals');
-const StartServerPlugin = require('start-server-webpack-plugin');
 
 const buildTarget = require('./buildTarget');
 const stylesProductionConfigurator = require('./styles-prod-config');
-const baseDevConfig = require('./dev-config');
 
 module.exports = (directoryname, isPorduction) => {
     const baseConfig = {
@@ -40,7 +37,7 @@ module.exports = (directoryname, isPorduction) => {
                             }
                         }
                     ]
-                },
+                }
             ]
         },
         entry: {
@@ -86,5 +83,5 @@ module.exports = (directoryname, isPorduction) => {
         return webpackMerge(baseConfig, stylesProductionConfig, productionConfig);
     }
 
-    return webpackMerge(baseConfig, baseDevConfig, developmentConfig);
+    return webpackMerge(baseConfig, developmentConfig);
 };
