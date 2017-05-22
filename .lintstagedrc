@@ -1,4 +1,4 @@
 {
-    "*.js": "eslint",
-    "*.scss": "stylelint"
+    "*.js": ["eslint-staged", "prettier-staged", "git add"],
+    "*.scss": ["stylelint-staged", "stylefmt", "comb", "git add"]
 }
