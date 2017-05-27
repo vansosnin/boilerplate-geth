@@ -6,18 +6,14 @@ module.exports = directoryname => {
 
     return {
         entry: {
-            vendor: ['react', 'react-dom', 'redux', 'react-redux', 'redux-actions', 'react-router', 'react-router-redux', 'reselect', 'bluebird']
+            vendor: ['react', 'react-dom', 'redux', 'react-redux', 'redux-actions', 'react-router', 'react-router-redux', 'reselect', 'bluebird', 'classnames']
         },
         module: {
             rules: [
                 {
                     test: /\.jsx?$/,
                     use: 'babel-loader',
-                    include: [
-                        path.join(directoryname, 'client'),
-                        path.join(directoryname, 'server'),
-                        path.join(directoryname, 'ui')
-                    ],
+                    include: [path.join(directoryname, 'client'), path.join(directoryname, 'server'), path.join(directoryname, 'ui')],
                     exclude: /node_modules/
                 }
             ]
@@ -39,9 +35,7 @@ module.exports = directoryname => {
                 CoreUI: path.join(uiDirectory, 'components', 'Core'),
                 UserSelectors: path.join(uiDirectory, 'selectors', 'userSelectors')
             },
-            modules: [
-                'node_modules'
-            ],
+            modules: ['node_modules'],
             extensions: ['.js', '.jsx']
         }
     };
