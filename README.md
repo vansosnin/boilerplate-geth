@@ -1,4 +1,4 @@
-# Boilerplate «Geth»
+# Boilerplate «Geth» [NOT SUPPORTED]
 
 [![Build Status](https://travis-ci.org/vansosnin/boilerplate-geth.svg?branch=master)](https://travis-ci.org/vansosnin/boilerplate-geth)
 
